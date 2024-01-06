@@ -1,0 +1,24 @@
+Creation date: Jan 3, 2024
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Shawn Sampson, OU=agilewebsmithing, O=agilewebsmithing, L=burnside, ST=ky, C=US
+Issuer: CN=Shawn Sampson, OU=agilewebsmithing, O=agilewebsmithing, L=burnside, ST=ky, C=US
+Serial number: 9594b16
+Valid from: Wed Jan 03 08:12:36 EST 2024 until: Sun May 21 09:12:36 EDT 2051
+Certificate fingerprints:
+         SHA1: 3D:33:C7:3C:2C:0D:EC:78:1E:BE:82:21:66:FA:CD:FE:FF:12:C4:72
+         SHA256: 96:B5:6B:31:D4:55:55:7C:A9:C5:82:48:EC:BD:57:FD:51:D5:04:84:CB:DB:10:24:6D:74:B3:FC:85:D5:EC:D0
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: E7 49 B6 CA 62 FA 38 45   99 FC 23 8B 63 C4 A8 EF  .I..b.8E..#.c...
+0010: 00 99 2D E0                                        ..-.
+]
+]
