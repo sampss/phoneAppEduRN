@@ -11,6 +11,11 @@ import SignIn from './src/screens/auth/SignIn';
 import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
 import { envVars } from './src/utils/envVars';
 import { universalStyles } from './src/utils/universalStyles';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
 
@@ -29,16 +34,29 @@ const App = () => {
   return (
     
     <SafeAreaView  >
-      <View style={ universalStyles.mainView }>
-        <StatusBar />
-        <SignIn />
-      </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+      </Stack.Navigator>
+    </NavigationContainer>
     </SafeAreaView>
     
   );
 };
 
 /*
+
+
+
+      <View style={ universalStyles.mainView }>
+        <StatusBar />
+        <SignIn />
+      </View>
+
+
+----------------------------------------
 <Splash loadedBy={false}/>
 
   // Using typesctript stricter language, requires : type 
