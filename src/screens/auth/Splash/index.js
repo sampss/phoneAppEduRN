@@ -3,9 +3,15 @@ import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { styles } from "./styles";
 import Button from "../../../components/Button";
 
-const Splash = (props) => {
-    const { loadedBy } = props; 
+const Splash = ({navigation}) => {
+
+    const onSignIn = () => { navigation.navigate('SignIn') }
+
+    const onSignUp = () => { navigation.navigate('SignUp') }
+
     return (
+
+        <ScrollView>
         <View style={styles.container}>
 
             <Image resizeMode='contain' style={styles.image} source={require('../../../assets/spash_image.png')} />
@@ -15,16 +21,16 @@ const Splash = (props) => {
                 <Text style={styles.titleText}>You'll Find</Text>
                 <Text style={[styles.titleText, styles.innerTitle]}>All</Text>
                 <Text style={styles.titleText}>You Need Here!</Text>
-                <Text style={[styles.titleText, styles.loadedText]}>{ loadedBy ? "Loaded by TypeScript." : "Loaded by js."}</Text>
             </View>
 
-            <Button buttonText={'A Button'} />
+            <Button buttonText={'Sign In'} onPress={onSignIn} />
 
-            <Pressable hitSlop={20} >
-                <Text style={ styles.signInText }>Sign In</Text>
+            <Pressable hitSlop={30} >
+                <Text style={ styles.signInText } onPress={onSignUp}>Sign Up</Text>
             </Pressable>
 
         </View>
+        </ScrollView>
     )
 }
 

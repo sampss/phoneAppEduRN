@@ -11,12 +11,15 @@ import { universalStyles } from "../../../utils/universalStyles";
 
 const onSignUp = () => {}
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
+
+    const onSignUp = () => { navigation.navigate('SignUp') }
+    const onBack = () => { navigation.goBack() }
 
     return (
         
         <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}> 
-            <AuthHeader title='Sign In' /> 
+            <AuthHeader onBackPress={onBack} title='Sign In' /> 
         
             <Input labelText='Email' placeholder='name@email.com' />
 

@@ -7,7 +7,7 @@ const AuthHeader = ({title, onBackPress}) => {
 
         <View style={styles.container}>
                 <View style={ styles.leftContainer }>
-                    <Pressable hitSlop={20} onPress={onBackPress}>
+                    <Pressable hitSlop={30} onPress={onBackPress}>
                         <Image style={styles.image} source={require('../../assets/left_arrow.png')} />
                     </Pressable>
                 </View>

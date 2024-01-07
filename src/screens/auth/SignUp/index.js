@@ -9,16 +9,17 @@ import SignWithSeperator from "../../../components/SignWithSeperator";
 import GoogleLogin from "../../../components/GoogleLogin";
 import { universalStyles } from "../../../utils/universalStyles";
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
 
     const [checked, setChecked] = useState(false);
 
-    const onSignIn = () => { console.log('onSignIn')}
+    const onSignIn = () => { navigation.navigate('SignIn') }
+    const onBack = () => { navigation.goBack() }
 
     return (
         
         <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
-            <AuthHeader title='Sign Up' /> 
+            <AuthHeader onBackPress={onBack} title='Sign Up' /> 
         
             <Input labelText='Name' placeholder='John Doe' />
 

@@ -1,14 +1,16 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { colors } from "../../../utils/colors";
+import { Dimensions } from "react-native";
 
 export const styles = StyleSheet.create ({
     container:{
-        padding: 24,
+        padding: 16,
         flexDirection: 'column',
         justifyContent: 'center', // cannot place here, causes error
         alignItems: 'center',
-        height: '100%',
+        justifyContent: 'flex-start',
+        height: Dimensions.get('screen').height,
         borderWidth: 1,
         borderColor: colors.white,
     },
@@ -16,15 +18,16 @@ export const styles = StyleSheet.create ({
         width: '100%',
         height: 200,
         alignSelf: 'center',
-        marginBottom: 16,
+        //marginBottom: '5%',
     },
     titleTextContainer: {
-        marginVertical: 54,
+        marginVertical: '10%',
     },
     titleText: {
-        fontSize: 40,
+        fontSize: 30,
         fontWeight: 'bold',
         textAlign: 'center',
+        color: colors.lightBlue,
     },
     innerTitle: {
         color: '#FCA340',
